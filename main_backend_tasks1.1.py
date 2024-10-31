@@ -12,7 +12,8 @@ class EmailEscaping:
 
     def set_email(self, email):
         self.default_email = email
-        return self._escaping()
+        self.email_escaping = self._escaping()
+        return self.email_escaping
 
     def _escaping(self):
         if '@' in self.default_email:
@@ -39,7 +40,8 @@ class PhoneEscaping:
 
     def set_phone(self, phone):
         self.default_phone = phone
-        return self._escaping()
+        self.phone_escaping = self._escaping()
+        return self.phone_escaping
 
     def _escaping(self):
         number = self.number
@@ -77,7 +79,8 @@ class SkypeEscaping:
 
     def set_skype_link(self, skype_link):
         self.default_skype_link = skype_link
-        return self._escaping()
+        self.skype_link_escaping = self._escaping()
+        return self.skype_link_escaping
 
     def _escaping(self):
         if 'skype:' in self.default_skype_link:
